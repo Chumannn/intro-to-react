@@ -17,7 +17,10 @@
         constructor(props){
           super(props);
           this.state = {
-            number: 20
+            number: 22
+          }
+          this.state = {
+            remain: 108 - this.state.number
           }
         }
 
@@ -27,6 +30,7 @@
               <img src={this.props.image} alt="Bloc Logo"/>
               <h2>Current program: {this.props.label}</h2>
               <h3>Current week: {this.state.number}</h3>
+              <h4>Weeks remaining: {this.state.remain}</h4>
               <p>Current Date: {this.props.date.toLocaleDateString()}</p>
             </div>
           );
